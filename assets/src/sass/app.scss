@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@import 'mixins/grayscale';
+
+* {
+  font-family: 'Titillium Web', sans-serif;
+  color: #333;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f3f3f3;
+  .site {
+    display: grid;
+    grid-gap: 10px;
+    max-width: 1200px;
+    margin: auto;
+    .nav-previous {
+      font-size: 30px;
+    }
+    .nav-next {
+      font-size: 30px;
+    }
+    header {
+      margin-bottom: 30px;
+      .branding {
+        font-size: 80px;
+        line-height: 80px;
+        font-weight: bold;
+      }
+      .description {
+        font-size: small;
+        font-style: italic;
+      }
+    }
+    article {
+      .title {
+        font-size: 35px;
+        line-height: 35px;
+        a {
+          text-decoration: none;
+        }
+        margin-bottom: 0;
+      }
+      .meta {
+        font-style: italic;
+      }
+      .featured {
+        img {
+          width: 100%;
+          height: auto;
+          @include grayscale(100%);
+          &:hover {
+            @include grayscale(75%);
+          }
+        }
+      }
+    }
+  }
+}
